@@ -2,7 +2,7 @@
 
 ## 單輪軸
 
-![image](https://github.com/ss32324/matlab-monstor/blob/test/double_axle/%E8%BC%AA%E8%BB%B8.gif)
+![image](https://github.com/ss32324/matlab-monstor/blob/fix/001/%E8%BC%AA%E8%BB%B8.gif)
 
 ### 透過餘弦定理計算 (三邊求角度)
 1. a_b 長度為A點至B點距離
@@ -28,3 +28,17 @@
 ### 求得offset需做調整
 1. 左右圓的起點不同 分別為 0° 跟 180°
 2. 左右圓的offset會相反
+
+## 單輪軸單隻腿
+![image](https://github.com/ss32324/matlab-monstor/blob/test/leg/%E5%96%AE%E8%85%B3%E6%9C%89%E5%9C%93.gif)
+
+### 以C2為圓心的圓  求得C2_offset
+1. a_b 為 C2_0 到 B點距離;
+2. b_c c_a 為 C2圓半徑;
+3. C2_offset 角度為 acos((c_a^2 + b_c^2 - a_b^2) / (2 * c_a * b_c))
+
+### 透過∠C2_B_D 求得E點
+1. 在B圓上 D點角度與C2角度相減 則為∠C2_B_D度數
+2. □C2_B_D_E 為平行四邊形 因此∠E等於∠B 而E點在C2圓上的角度為∠B_D_E + C2_offset
+
+
